@@ -20,8 +20,41 @@ https://alunos.fullstackclub.com.br/area/produto/item/5472977
 
 * criar .env
     ```
-    DATABASE_URL=""
+    DATABASE_URL="postgresql://next-agenda-db_owner:npg_mGxRzq8Di3Wp@ep-misty-glitter-acpjcrji-pooler.sa-east-1.aws.neon.tech/next-agenda-db?sslmode=require"
     ```
+
+* src/db/index.ts
+```
+import "dotenv/config";
+
+// Make sure to install the 'pg' package 
+import { drizzle } from 'drizzle-orm/node-postgres';
+
+export const db = drizzle(process.env.DATABASE_URL!);
+```
+
+* drizzle.config.ts
+```
+import "dotenv/config";
+
+import { defineConfig } from "drizzle-kit";
+
+export default defineConfig({
+    out: "./drizzle",
+    schema: "./src/db/shema.ts",
+    dialect: "postgresql",
+    dbCredentials: {
+        url: process.env.DATABASE_URL!
+    }
+})
+```
+
+* Rodar o migrate
+```
+npm i dotenv   
+npx drizzle-kit push
+npx drizzle-kit studio
+```
 
 > * 2. ShadCN
 
@@ -29,7 +62,6 @@ https://alunos.fullstackclub.com.br/area/produto/item/5472977
 ```
 https://alunos.fullstackclub.com.br/area/produto/item/5472977
 ```
-
 #### Entidades
 > * User,
 > * Clinic,
