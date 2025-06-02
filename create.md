@@ -2,9 +2,12 @@ npx create-next-app@15.3.2 next-agenda
 
 #### Criando Agendamento NextJS
 #### visto 1:10h
+
+### 1 Etapa
 ```
 https://alunos.fullstackclub.com.br/area/produto/item/5472977
 ```
+
 #### Passo a passo Drizzle
 > * 1. Banco Drizzle
     ```
@@ -20,12 +23,26 @@ https://alunos.fullstackclub.com.br/area/produto/item/5472977
     ```
 #### Passo a passo Shadcn
 
+### 2 Etapa
+```
+https://alunos.fullstackclub.com.br/area/produto/item/5480925
+```
+> [] Tela de login e criação de conta
+> [] Tela com e-mail e senha
+> [] Tela com Google
+> [] Fundamentos do Next.js (Rotas, Páginas, Layouts)
+> [] Criação de clinica
+
 ``` instalando
 npx shadcn@2.5.0 init
 ```
 
 ``` button
 npx shadcn@2.5.0 add button
+```
+
+``` tabs
+npx shadcn@2.5.0 add tabs input label card form
 ```
 
 * criar .env
