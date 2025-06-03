@@ -89,6 +89,37 @@ npx drizzle-kit studio
 ```
 https://alunos.fullstackclub.com.br/area/produto/item/5472977
 ```
+
+
+
+> * 3. Form Login
+ 
+> * 4. Auth
+```
+npm install better-auth
+```
+```
+npm install better-auth
+```
+> * 5. env
+
+```
+BETTER_AUTH_SECRET="123456"
+BETTER_AUTH_URL="http://localhost:3000"
+```
+
+```
+npm remove better-auth
+```
+
+```
+npm i better-auth@1.2.7
+```
+
+```
+npx @better-auth/cli@1.2.7 generate
+```
+
 #### Entidades
 > * User,
 > * Clinic,

@@ -1,0 +1,5 @@
+
+DATABASE_URL="postgresql://next-agenda-db_owner:npg_mGxRzq8Di3Wp@ep-misty-glitter-acpjcrji-pooler.sa-east-1.aws.neon.tech/next-agenda-db?sslmode=require"
+
+BETTER_AUTH_SECRET="123456"
+BETTER_AUTH_URL=http://localhost:3000

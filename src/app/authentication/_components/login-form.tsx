@@ -1,27 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { z } from "zod";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
 
 const registerSchema = z.object({
   email: z
@@ -60,9 +46,7 @@ const LoginForm = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="grid gap-6">
-                  <FormField
-                    control={form.control}
-                    name="email"
+                  <FormField control={form.control} name="email"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>E-mail</FormLabel>
@@ -71,8 +55,18 @@ const LoginForm = () => {
                         </FormControl>
                         <FormMessage />
                       </FormItem>
-                    )}
-                  ></FormField>
+                    )}></FormField>
+
+                    <FormField control={form.control} name="password"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Senha</FormLabel>
+                        <FormControl>
+                          <Input placeholder="***************" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}></FormField>
                 </CardContent>
                 <CardFooter>
                   <Button type="submit">Entrar</Button>
