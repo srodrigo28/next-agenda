@@ -2,11 +2,9 @@ import Link from "next/link";
 
 export default function Home(){
   return(
-      <div className="w-full flex justify-between bg-slate-900 p-4">
-        <h1 className="text-white font-bold tracking-wide text-2xl"> Home </h1>
-        <Link href="/authentication" className="p-2 cursor-pointer bg-blue-700 px-5 text-white rounded-md">
-            <span>Login</span>
-        </Link>
-    </div> 
+      <div className="w-full flex flex-col md:flex-row justify-between bg-white p-4 h-screen">
+        <div className="bg-blue-500 h-[50vh] md:h-[100vh] w-full"></div>  
+        <div className="bg-white h-[50vh] md:h-[100vh] w-full"></div>  
+      </div> 
   )
 }
